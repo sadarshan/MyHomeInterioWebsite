@@ -1,0 +1,11 @@
+.DS_Store
+.claude/
+logs/
+
+# Local reference material (not used by the live site bundle)
+My Home Interi'o' example videos for context about the company/
+
+# Working artifacts
+assets/hero-candidates/
+assets/hero/*.original.mp4
+assets/reels/*.original.mp4

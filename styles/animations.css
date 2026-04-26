@@ -1,0 +1,100 @@
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatSoft {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulseAmbient {
+  0%, 100% {
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes paintFade {
+  from {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.5;
+  }
+  to {
+    transform: scale(0.35) rotate(38deg);
+    opacity: 0;
+  }
+}
+
+.site-header,
+.home-hero,
+.showcase-toolbar,
+.studio-hero,
+.site-footer,
+.designer .panel {
+  opacity: 0;
+  animation: fadeUp 0.62s ease-out forwards;
+}
+
+.site-header { animation-delay: 0.04s; }
+.home-hero { animation-delay: 0.1s; }
+.showcase-toolbar { animation-delay: 0.16s; }
+.studio-hero { animation-delay: 0.12s; }
+.designer .panel.toolbar { animation-delay: 0.16s; }
+.designer .panel.canvas-wrap { animation-delay: 0.22s; }
+.designer .panel.inspector { animation-delay: 0.28s; }
+.site-footer { animation-delay: 0.34s; }
+
+.kitchen-card {
+  opacity: 0;
+  animation: fadeUp 0.62s ease-out forwards;
+}
+
+.kitchen-card:nth-child(1) { animation-delay: 0.2s; }
+.kitchen-card:nth-child(2) { animation-delay: 0.28s; }
+.kitchen-card:nth-child(3) { animation-delay: 0.36s; }
+
+.preview-shell {
+  animation: floatSoft 6.2s ease-in-out 1.2s infinite;
+}
+
+.ambient-gradient {
+  animation: pulseAmbient 9s ease-in-out infinite;
+}
+
+.ambient-a { animation-delay: 0s; }
+.ambient-b { animation-delay: 1.8s; }
+.ambient-c { animation-delay: 3s; }
+
+.paint-dot {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50% 46% 52% 48% / 48% 52% 46% 52%;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  animation: paintFade 0.7s ease-out forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
