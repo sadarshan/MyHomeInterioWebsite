@@ -123,17 +123,12 @@
 
   <main>
     <section class="home-hero" id="top" aria-label="Featured modular kitchen">
-      <video class="hero-media"
-             autoplay
-             muted
-             loop
-             playsinline
-             preload="metadata"
-             poster="assets/hero/landing-kitchen.jpg"
-             aria-hidden="true">
-        <source src="assets/hero/landing-hero.mp4" type="video/mp4">
-      </video>
+      <div class="hero-slideshow" aria-hidden="true">
+        <div class="hero-layer hero-layer--old" data-hero-old style="background-image:url('assets/hero/slideshow/k01.jpeg');"></div>
+        <div class="hero-layer hero-layer--new" data-hero-new style="background-image:url('assets/hero/slideshow/k02.jpeg');"></div>
+      </div>
       <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-wipe-bar" data-hero-bar aria-hidden="true"></div>
       <div class="hero-copy-wrap shell">
         <div class="hero-copy">
           <h1>Modular Kitchen Designs</h1>
@@ -408,5 +403,6 @@
 
   <script src="js/ui/site.js"></script>
   <script src="js/ui/home-flow.js"></script>
+  <script src="js/ui/hero-slideshow.js"></script>
 </body>
 </html>

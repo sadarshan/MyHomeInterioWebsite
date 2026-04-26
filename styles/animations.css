@@ -95,6 +95,17 @@
   *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
+    animation-delay: 0ms !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .site-header,
+  .home-hero,
+  .showcase-toolbar,
+  .studio-hero,
+  .site-footer,
+  .designer .panel,
+  .kitchen-card {
+    opacity: 1 !important;
   }
 }

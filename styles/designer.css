@@ -436,6 +436,18 @@ svg.iso .backsplash .face.top {
     grid-template-columns: 1fr;
   }
 
+  .canvas-wrap {
+    order: 1;
+  }
+
+  .toolbar {
+    order: 2;
+  }
+
+  .inspector {
+    order: 3;
+  }
+
   .toolbar,
   .inspector {
     max-height: none;
@@ -443,11 +455,11 @@ svg.iso .backsplash .face.top {
   }
 
   .canvas-wrap {
-    min-height: 600px;
+    min-height: clamp(480px, 74vh, 620px);
   }
 
   .canvas-wrap svg.iso {
-    min-height: 520px;
+    min-height: clamp(380px, 58vh, 520px);
   }
 }
 
@@ -465,7 +477,111 @@ svg.iso .backsplash .face.top {
     align-items: flex-start;
   }
 
+  .canvas-wrap {
+    min-height: clamp(420px, 72vh, 560px);
+  }
+
+  .canvas-wrap svg.iso {
+    min-height: clamp(330px, 56vh, 430px);
+    height: auto;
+  }
+
+  .canvas-hint {
+    position: static;
+    margin: 10px 4px 0;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 0.74rem;
+  }
+
   .swatch-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .panel {
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .panel h3 {
+    font-size: 1.35rem;
+  }
+
+  .panel h4 {
+    font-size: 0.66rem;
+    letter-spacing: 0.12em;
+  }
+
+  .panel-subtitle {
+    font-size: 0.78rem;
+  }
+
+  .preset-grid,
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .module-tile {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 10px;
+    padding: 9px 10px;
+  }
+
+  .module-tile svg {
+    width: 30px;
+    height: 30px;
+  }
+
+  .module-tile span {
+    font-size: 0.78rem;
+  }
+
+  .preset-chip,
+  .style-pack-chip,
+  .action-chip,
+  .save-row button {
+    min-height: 44px;
+  }
+
+  .save-row {
+    flex-direction: column;
+  }
+
+  .save-row button {
+    width: 100%;
+  }
+
+  .canvas-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .canvas-header p {
+    font-size: 0.68rem;
+  }
+
+  .material-swatch {
+    min-height: 52px;
+  }
+
+  .toggle-row label {
+    font-size: 0.8rem;
+    max-width: 72%;
+  }
+
+  .toggle {
+    width: 52px;
+    height: 30px;
+  }
+
+  .toggle::after {
+    width: 24px;
+    height: 24px;
+  }
+
+  .toggle.on::after {
+    transform: translateX(22px);
   }
 }
