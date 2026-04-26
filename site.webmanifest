@@ -1,0 +1,18 @@
+{
+  "name": "MyHOME interi'o' — Modular Kitchen Contractor",
+  "short_name": "MyHOME interi'o'",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#f7f3ea",
+  "theme_color": "#f3ece0",
+  "description": "Modular kitchen design and manufacturing contractor in Rajkot, Gujarat.",
+  "icons": [
+    {
+      "src": "/assets/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
